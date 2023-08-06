@@ -1,0 +1,23 @@
+﻿@using System.Data;
+@model DataTable
+<table align="center">
+    <tr>
+        <th align="center">Country ID</th>
+        <th></th>
+        <th align="center">Country Name</th>
+    </tr>
+    @{
+        foreach(DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td align="center">
+                    @dr["CountryID"]
+                </td>
+                <td></td>
+                <td align="center">
+                    @dr["CountryName"]
+                </td>
+            </tr>
+        }
+    }
+</table>
